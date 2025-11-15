@@ -1,3 +1,14 @@
+:root {
+  --background-color: #bdbfae;
+  --background-color-footer: #6b7366;
+  --text-color-primary: #20261c;
+  --text-color-secundary: #bdbfae;
+  --cor-quaternaria: #262620;
+  --cor-quinquenaria: #677365;
+
+  --font-primary: "Libre Franklin", sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,7 +16,10 @@
 }
 
 body {
-  height: 100vh;
+  background: var(--background-color);
+  color: var(--text-color-primary);
+  font-family: var(--font-primary);
+  min-height: 100vh;
 }
 
 .container {
@@ -20,4 +34,31 @@ body {
 .main,
 .footer {
   border: 1px solid red;
+}
+
+.footer {
+  width: 100%;
+  justify-content: center;
+  padding: 2rem;
+  display: flex;
+  gap: 1rem;
+  font-size: 1.5rem;
+  background-color: var(--background-color-footer);
+  color: var(--text-color-secundary);
+  font-weight: 400;
+}
+
+.destaque-rodape {
+  color: var(--text-color-primary);
+  font-weight: 900;
+}
+
+.links-icones {
+  cursor: pointer;
+  color: var(--text-color-secundary);
+  transition-duration: 0.3s;
+}
+
+.links-icones:hover {
+  color: var(--text-color-primary);
 }
